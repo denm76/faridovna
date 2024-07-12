@@ -1,6 +1,7 @@
 body {
   max-width: 1440px;
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   background-color: burlywood;
   border: 5px solid lightblue;
@@ -8,6 +9,7 @@ body {
 }
 
 .main_title {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +29,7 @@ body {
 }
 .firstline_image,
 .secondline_image {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -37,6 +40,11 @@ body {
   height: 350px;
   border: 4px solid lightblue;
   border-radius: 20px;
+  transition: all 0.5s linear;
+}
+
+.gallery_image:hover {
+  transform: scale(1.2);
 }
 
 .footer_info {
@@ -59,5 +67,24 @@ body {
 
   .gallery_image {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    border: none;
+  }
+  .main_title {
+    text-align: center;
+  }
+
+  .main_img {
+    width: 90%;
+    height: auto;
+  }
+
+  .gallery_image {
+    width:90%;
+    height: auto;
   }
 }
